@@ -1,0 +1,72 @@
+.card {
+    width: 1080px; /* Ajuste a largura conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+input{
+    color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Defina a altura conforme necessário */
+}
+
+.custom-edit {
+ border-radius: 5px;
+ padding: 3px;
+ transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+.custom-edit:hover {
+  background-color: #F5FF99 /* Cor de fundo ao passar o mouse */
+}
+
+.custom-delete {
+  border-radius: 3px;
+  padding: 3px;
+  transition: background-color 0.3s; /* Adiciona uma transição suave */
+ }
+ 
+ .custom-delete:hover {
+   background-color: #ED737B/* Cor de fundo ao passar o mouse */
+ }
+
+ .custom-breadcrumb {
+  max-width: 80%;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%; /* Defina a largura como 100% para ocupar toda a largura disponível */
+  max-width: 1080px; /* Adiciona uma largura máxima para evitar que a tabela fique muito larga */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
+
+/* Adiciona regra de media query para ajustar o tamanho da tabela em dispositivos menores */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Em dispositivos menores, permite que a tabela ocupe toda a largura disponível */
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Defina a altura conforme necessário */
+  }
+
+  .custom-table {
+    max-width: 80%;
+    margin-top: 32rem;
+  }
+}
+

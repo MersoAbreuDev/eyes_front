@@ -1,0 +1,11 @@
+<div class="menubar" *ngIf="mostrarMenu">
+    <ul>
+        <li> <p-sidebar  [(visible)]="sidebarVisible" styleClass="w-30rem">
+            <div class="card flex justify-content-center" style="color: #074357;">
+                <p-panelMenu [model]="items" [style]="{'width':'280px', 'color':'#074357'}"></p-panelMenu>
+            </div>
+        </p-sidebar>
+        <a (click)="sidebarVisible = true" ><i class="fa-solid fa-bars" style="font-size: 2rem;color: #074357;margin-left: 15px; margin-top: 5px; cursor: pointer; "></i></a></li>
+        <li style="float: right;"><a (click)="logoff()"><i class="pi pi-fw pi-power-off" style="font-size:2rem;color: red; cursor: pointer;"></i></a></li>
+    </ul>
+</div>

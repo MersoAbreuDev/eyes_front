@@ -1,0 +1,26 @@
+.custom-form{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10%;
+}
+
+.icon{
+    width: 50%;
+    animation: go-back 1s infinite alternate;
+}
+
+@keyframes go-back {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .custom-input{
+    color: black;
+    padding-right: 2.5rem;
+  }

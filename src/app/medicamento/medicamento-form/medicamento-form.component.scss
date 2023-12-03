@@ -1,0 +1,40 @@
+
+.custom-breadcrumb {
+  max-width: 80%;
+  margin-top: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Defina a altura conforme necessário */
+}
+
+/* Estilo para o card */
+.card {
+  width: 620px; /* Ajuste a largura conforme necessário */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o conteúdo no card */
+.card-content {
+  padding: 16px;
+}
+
+/* Estilo para os campos de entrada */
+.custom-input1,
+.custom-input2 {
+  width: 500px;
+  padding: 0.75rem; /* Ajuste conforme necessário */
+  color: black;
+}
+
+/* Estilo para os botões */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

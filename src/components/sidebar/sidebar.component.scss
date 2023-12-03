@@ -1,0 +1,32 @@
+.menubar {
+    background-color: #d9eaed;
+    height: 65px;
+}
+
+.menubar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menubar li {
+    float: left;
+}
+
+.menubar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menubar li a:hover {
+    background-color: #d9eaed;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}

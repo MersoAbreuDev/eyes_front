@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col-12">
+      <p-breadcrumb  [model]="items" [home]="home"></p-breadcrumb>
+      <div class="col-8" style="margin-top: 1rem;">
+        <div class="card" style="padding: 2rem;">
+          <div class="grid">
+            <div style="display: flex; justify-content: center; ">
+              <div class="p-fluid card-content">
+                <form [formGroup]="form" (ngSubmit)="cadastrar()" autocomplete="off">
+                  <span class="p-float-label">
+                    <input formControlName="nome" id="float-input" type="text" pInputText class="custom-input1">
+                    <label for="float-input">Nome</label>
+                  </span>
+                  <span style="margin-top: 25px;" class="p-float-label">
+                    <input formControlName="dosagem" type="text" id="float-input" pInputText class="custom-input2">
+                    <label for="float-input">Dosagem</label>
+                  </span>
+                  <div class="button-container">
+                    <button pButton type="submit" label="Salvar" class="p-button-success"></button>
+                    <button pButton type="button" style="margin-left: 5px;" label="Cancelar" class="p-button-danger"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
