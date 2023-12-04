@@ -14,7 +14,7 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  
 }
 
 .custom-edit {
@@ -43,12 +43,24 @@ input{
 }
 
 .custom-page{
-  margin-top: 30rem;
+  margin-top: 15vh;
 }
 
 @media (min-width: 768px) and (max-height: 600px) {
   .custom-page{
-    margin-top: 50rem;
+    margin-top: 15vh;
   }
 }
 
+.card {
+  position: fixed;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 15%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

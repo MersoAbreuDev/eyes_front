@@ -6,6 +6,7 @@ import { ReceitaFormComponent } from './receita-form/receita-form.component';
 import { ReceitaSearchComponent } from './receita-search/receita-search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrimeModule } from 'src/shared/prime.module';
+import { ComponentModule } from 'src/components/component.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { PrimeModule } from 'src/shared/prime.module';
   ],
   imports: [
     CommonModule,
+    ComponentModule,
     ReceitaRoutingModule,
     ReactiveFormsModule,
     PrimeModule,

@@ -14,7 +14,7 @@ export class ReceitaSearchComponent {
   items!: any;
   home!: any;
   receitas!: any[];
-  rowsPage = [5, 10];
+  rowsPage = [5, 10, 20];
   requestOptions: any;
   termoPesquisa: string = '';
   matchModeOptions: SelectItem[] | undefined;
