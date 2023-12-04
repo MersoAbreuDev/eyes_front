@@ -50,7 +50,7 @@ export class LoginService {
         } else if (err.status === 404) {
           this.utilsService.showError(err.error.message);
         } else if (err.status === 0 && err.status !== 404) {
-          this.utilsService.showError('Ocorreu um erro na aplicação, tente novamente!');
+          this.utilsService.showError('Ocorreu um erro na aplicação, tente novamente mais tarde!');
         } else {
           this.utilsService.showError("Ocorreu um erro no servidor, tente mais tarde!");
         }
