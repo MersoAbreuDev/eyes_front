@@ -41,7 +41,7 @@ export class LoginService {
         localStorage.setItem('currentUser', JSON.stringify(data));
         this.currentUserSubject.next(data);
         this.isAuthenticated.next(true);
-        this.utilsService.showSuccess("Sucesso!"); 
+        this.utilsService.showSuccess("Login realizado com sucesso!"); 
         return data;
       }),
       catchError((err) => {

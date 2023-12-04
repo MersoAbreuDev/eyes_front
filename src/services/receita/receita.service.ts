@@ -42,7 +42,7 @@ export class ReceitaService {
       ).pipe(map(data => {
                 catchError((err)=>{
                   if(err.status == 200){
-                      this.utilsService.showError("Sucesso!")
+                      this.utilsService.showError("Login realizado com sucesso!")
                      
                   }
                   return throwError(()=> err)

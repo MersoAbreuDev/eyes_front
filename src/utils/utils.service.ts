@@ -15,7 +15,6 @@ export class UtilsService {
 
   async showError(message: string){
     await this.messageService.add({severity:'error', summary:'Erro: ', detail:message});
-
   }
 
   

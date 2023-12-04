@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/eyes_front",
     "ignore": [
       "firebase.json",
       "**/.*",
