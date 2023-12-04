@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReceitaRoutingModule } from './receita-routing.module';
 import { ReceitaFormComponent } from './receita-form/receita-form.component';
 import { ReceitaSearchComponent } from './receita-search/receita-search.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrimeModule } from 'src/shared/prime.module';
 
 
@@ -17,7 +17,8 @@ import { PrimeModule } from 'src/shared/prime.module';
     CommonModule,
     ReceitaRoutingModule,
     ReactiveFormsModule,
-    PrimeModule
+    PrimeModule,
+    FormsModule
   ],
   exports:[
     ReceitaSearchComponent

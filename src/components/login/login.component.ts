@@ -58,6 +58,7 @@ export class LoginComponent implements OnInit {
         this.navigateURL('home');
       })
     }
+
   }
 
   isValidForm(){

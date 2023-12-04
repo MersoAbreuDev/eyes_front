@@ -28,51 +28,52 @@ export class SidebarComponent implements OnInit {
     ngOnInit() {
         this.loginService.isAuthenticated$.subscribe(isAuthenticated => {
             this.mostrarMenu = isAuthenticated;
+            console.log("Menu ",isAuthenticated );
           });
         this.items = [
             {
                 label: 'Cadastros',
                 icon: 'pi pi-fw pi-file',
                 items: [
-                    {
-                        label: 'Medicamentos',
-                        items: [
-                            {
-                                label: 'Novo',
-                                icon: 'fa-solid fa-plus',
-                                routerLink:'medicamentos/new',
-                                styleClass: 'menu-item-color'
-                            },
-                            {
-                                label: 'Consultar',
-                                icon: 'fa-solid fa-magnifying-glass',
-                                routerLink:'medicamentos'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Embalagem',
-                        items: [
-                            {
-                                label: 'Novo',
-                                icon: 'fa-solid fa-plus',
-                                routerLink:'embalagens/new',
-                            },
-                            {
-                                label: 'Consultar',
-                                icon: 'fa-solid fa-magnifying-glass',
-                                routerLink:'embalagens',
-                            }
-                        ]
-                    },
+                    // {
+                    //     label: 'Medicamentos',
+                    //     items: [
+                    //         {
+                    //             label: 'Novo',
+                    //             icon: 'fa-solid fa-plus',
+                    //             routerLink:'medicamentos/new',
+                    //             styleClass: 'menu-item-color'
+                    //         },
+                    //         {
+                    //             label: 'Consultar',
+                    //             icon: 'fa-solid fa-magnifying-glass',
+                    //             routerLink:'medicamentos'
+                    //         }
+                    //     ]
+                    // },
+                    // {
+                    //     label: 'Embalagem',
+                    //     items: [
+                    //         {
+                    //             label: 'Novo',
+                    //             icon: 'fa-solid fa-plus',
+                    //             routerLink:'embalagens/new',
+                    //         },
+                    //         {
+                    //             label: 'Consultar',
+                    //             icon: 'fa-solid fa-magnifying-glass',
+                    //             routerLink:'embalagens',
+                    //         }
+                    //     ]
+                    // },
                     {
                         label: 'Receita',
                         items: [
-                            {
-                                label: 'Novo',
-                                icon: 'fa-solid fa-plus',
-                                routerLink:'receitas/new',
-                            },
+                            // {
+                            //     label: 'Novo',
+                            //     icon: 'fa-solid fa-plus',
+                            //     routerLink:'receitas/new',
+                            // },
                             {
                                 label: 'Consultar',
                                 icon: 'fa-solid fa-magnifying-glass',

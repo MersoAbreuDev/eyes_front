@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { RouterGuard } from 'src/guards/router.guard';
+import { AuthGuard } from 'src/guards/auth.guard';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { RouterGuard } from 'src/guards/router.guard';
 })
 export class AppComponent {
   title = 'eyes_front';
-  constructor(private routerGuard:RouterGuard,
+  constructor(private authGuard:AuthGuard,
     private router: Router ){}
 
 }

@@ -15,7 +15,7 @@ export class LoginService {
   returnUrl:string="";
   private isAuthenticated = new BehaviorSubject<boolean>(false)
   mostrarMenuEmitter = new EventEmitter<boolean>();
-  
+
     constructor(private http: HttpClient, 
                 private router : Router,
                 private utilsService: UtilsService,
@@ -29,6 +29,9 @@ export class LoginService {
   }
 
   get isAuthenticated$() {
+    if(localStorage.getItem('currentUser')!=null){
+      this.isAuthenticated.next(true);
+    }
     return this.isAuthenticated.asObservable();
   }
 
