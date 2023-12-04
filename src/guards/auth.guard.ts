@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
     // Verificar se o token JWT está presente
     const currentUser = this.loginService.currentUserValue;
     if (currentUser && currentUser.token) {
-      return true; // Permitir a navegação se o token estiver presente
+      return true; 
     }
 
     // Redirecionar para a página de login se o token não estiver presente
