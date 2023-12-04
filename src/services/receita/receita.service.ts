@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, catchError, map, throwError } from 'rxjs';
-import { SERVER_URI } from 'src/enviroments/server';
+import { SERVER_URI } from 'src/enviroments/servers/server';
 import { UtilsService } from 'src/utils/utils.service';
 
 @Injectable({
