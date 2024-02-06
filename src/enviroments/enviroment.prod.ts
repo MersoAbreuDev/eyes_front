@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    BASE_URL: 'https://neuvye-app-e43acc56d374.herokuapp.com/neuvye'
+    BASE_URL: 'https://neuvye-app-21fe1123e31c.herokuapp.com/neuvye'
   };

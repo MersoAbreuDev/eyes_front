@@ -8,12 +8,14 @@ import { PrimeModule } from 'src/shared/prime.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
+import { FileSizePipe } from 'src/shared/pipes/fileSize/file-size.pipe';
 
 
 @NgModule({
   declarations: [
     MedicamentoSearchComponent,
-    MedicamentoFormComponent
+    MedicamentoFormComponent,
+    FileSizePipe
   ],
   imports: [
     CommonModule,

@@ -44,6 +44,7 @@ import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { MenubarModule } from 'primeng/menubar';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { FileSizePipe } from './pipes/fileSize/file-size.pipe';
 
 @NgModule({
     imports: [
@@ -139,6 +140,9 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
         MenubarModule,
         BreadcrumbModule
         
+    ],
+    declarations: [
+
     ]
 
 })

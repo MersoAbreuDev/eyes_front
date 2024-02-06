@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { IMedicamento } from 'src/interfaces/medicamento/IMedicamento';
 import { MedicamentoService } from 'src/services/medicamento/medicamento.service';
+
 
 @Component({
   selector: 'app-medicamento-form',
@@ -14,6 +15,9 @@ export class MedicamentoFormComponent {
   medicamento!:IMedicamento;
   items!:any;
   home!:any;
+  arquivosSelecionados: File[] = [];
+
+  @ViewChild('fileInput') fileInput:any;
   constructor( private fb: FormBuilder,
      private primengConfig: PrimeNGConfig,
      private messageService: MessageService,
@@ -29,8 +33,7 @@ export class MedicamentoFormComponent {
 
   initForms(){
     this.form = this.fb.group({
-      nome:['',[Validators.required]],
-      dosagem:['',[Validators.required]]
+      imagem:['',[Validators.required]],
     })
   }
 
@@ -38,10 +41,8 @@ export class MedicamentoFormComponent {
     return form.controls[control].value;
   }
 
-  createPayload(nome = this.getValueControl(this.form, 'nome'),
-                dosagem = this.getValueControl(this.form, 'dosagem')){
-      const payload ={nome, dosagem};
-
+  createPayload(imagem = this.getValueControl(this.form, 'imagem')){
+      const payload ={imagem};
       return payload;
   }
   showSuccess() {
@@ -57,21 +58,29 @@ export class MedicamentoFormComponent {
   } 
 
   cadastrar(){
-   
-      this.medicamentosService.salvar(this.createPayload()).subscribe((response:any) =>
-        {
-            this.medicamento = response;
-            this.form.reset();
-        },
-        erro => {
-          if(erro.status !== 200) {
-            this.showError() 
-          }
-      })
-    
+   console.log("Payload ", this.createPayload)
   }
 
   isValidForm(){
     return this.form.valid;
+  }
+
+  submitForm() {
+    const formData = new FormData();
+     for (let i = 0; i < this.arquivosSelecionados.length; i++) {
+      formData.append('arquivos', this.arquivosSelecionados[i]);
+    }
+  }
+
+  onFileChange(event:any) {
+    this.arquivosSelecionados = Array.from(event.target.files);
+  }
+
+  removerArquivo(arquivo: File) {
+    this.arquivosSelecionados = this.arquivosSelecionados.filter(a => a !== arquivo);
+  }
+
+  getImagemUrl(arquivo: File): string {
+    return URL.createObjectURL(arquivo);
   }
 }

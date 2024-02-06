@@ -38,3 +38,74 @@
   justify-content: space-between;
   margin-top: 10px;
 }
+
+.custom-file-input {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  span {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover span {
+    background-color: #0056b3; 
+  }
+}
+
+
+
+//Grid imagens
+.gallery {
+  .p-grid {
+    margin: -10px; // Ajuste para evitar margens indesejadas entre as colunas
+
+    .p-col {
+      padding: 10px;
+    }
+  }
+
+  .thumbnail {
+    margin-bottom: 10px; // Espaço entre as miniaturas
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 128px; // Largura máxima de 128px para a imagem
+      max-height: 128px; // Altura máxima de 128px para a imagem
+      display: block;
+      border-radius: 4px; // Borda arredondada
+      border: 1px solid #ddd; // Borda para separar a imagem da borda do bloco
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+
+      button {
+        margin-top: 4px;
+      }
+    }
+  }
+}

@@ -7,14 +7,25 @@
           <div style="display: flex; justify-content: center; ">
             <div class="p-fluid card-content">
               <form [formGroup]="form" (ngSubmit)="cadastrar()" autocomplete="off">
-                <span class="p-float-label">
-                  <input formControlName="nome" id="float-input" type="text" pInputText class="custom-input1">
-                  <label for="float-input">Nome</label>
-                </span>
-                <span style="margin-top: 25px;" class="p-float-label">
-                  <input formControlName="dosagem" type="text" id="float-input" pInputText class="custom-input2">
-                  <label for="float-input">Dosagem</label>
-                </span>
+                <div class="custom-file-input" style="margin-top: 25px;">
+                  <input formArrayName="imagem" #fileInput type="file" (change)="onFileChange($event)" multiple />
+                  <span>Escolher Arquivos</span>
+                </div>
+              
+                <!-- Lista de pré-visualização -->
+                <div *ngIf="arquivosSelecionados.length > 0" class="gallery" style="margin-top: 15px;">
+                  <p>Arquivos Selecionados:</p>
+                  <div class="p-grid">
+                    <div class="p-col-12 p-md-4 p-lg-4 p-xl-4" *ngFor="let arquivo of arquivosSelecionados">
+                      <div class="thumbnail">
+                        <img [src]="getImagemUrl(arquivo)" alt="Imagem" />
+                        <div class="caption">
+                          <button type="button" (click)="removerArquivo(arquivo)">Remover</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="button-container">
                   <button pButton type="submit" label="Salvar" class="p-button-success"></button>
                   <button pButton type="button" style="margin-left: 5px;" label="Cancelar" class="p-button-danger"></button>

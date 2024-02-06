@@ -39,7 +39,7 @@ export class SidebarComponent implements OnInit {
                     //     label: 'Medicamentos',
                     //     items: [
                     //         {
-                    //             label: 'Novo',
+                    //             label: 'Solicitar Novo',
                     //             icon: 'fa-solid fa-plus',
                     //             routerLink:'medicamentos/new',
                     //             styleClass: 'menu-item-color'
@@ -79,7 +79,8 @@ export class SidebarComponent implements OnInit {
                                 icon: 'fa-solid fa-magnifying-glass',
                                 routerLink:'receitas',
                             }
-                        ]
+                        ],
+                        
                     }
                 ]
                 
